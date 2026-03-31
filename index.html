@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelsey Mweni Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GLOBAL */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* ANIMATED TECH BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,#000,#001f3f,#000);
+z-index:-1;
+animation:moveBg 10s infinite alternate;
+}
+
+@keyframes moveBg{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+background:#000;
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+z-index:1000;
+}
+
+.logo{
+color:#00bfff;
+font-weight:bold;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero img{
+width:150px;
+height:150px;
+border-radius:50%;
+border:3px solid #00bfff;
+margin-bottom:15px;
+}
+
+.hero h1 span{
+color:#00bfff;
+}
+
+.btn{
+padding:10px 20px;
+background:#00bfff;
+border:none;
+color:black;
+margin-top:15px;
+cursor:pointer;
+border-radius:5px;
+text-decoration:none;
+}
+
+/* SECTION */
+section{
+padding:80px 40px;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#00bfff;
+}
+
+/* ABOUT */
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+}
+
+/* SKILLS */
+.charts{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.chart{
+text-align:center;
+}
+
+svg{
+width:120px;
+height:120px;
+transform:rotate(-90deg);
+}
+
+circle{
+fill:none;
+stroke-width:10;
+stroke:#222;
+}
+
+circle:nth-child(2){
+stroke:#00bfff;
+stroke-dasharray:314;
+stroke-dashoffset:calc(314 - (314 * var(--percent))/100);
+}
+
+.chart p{
+margin-top:10px;
+}
+
+/* PROJECTS */
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project{
+background:#111;
+padding:20px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-5px);
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+header{
+flex-direction:column;
+text-align:center;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Kelsey Mweni</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+<img src="Kelsey.jpg" alt="Profile Photo">
+
+<h1>Hello, I'm <span>Kelsey Mweni</span></h1>
+
+<p id="typing"></p>
+
+<a href="KELSY MWENI ICTGRAPHICS DESIGNER RESUME_KE.pdf" download class="btn">Download CV</a>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="about">
+
+<p>
+I am a passionate and detail-oriented ICT professional with strong skills in
+<strong>web development(Front-End development), IT support, basic networking, and graphic design</strong>.
+I enjoy building modern, responsive websites and creating visually appealing
+designs that communicate ideas effectively.
+</p>
+
+<p>
+With hands-on experience in HTML, CSS, and basic JavaScript, I am continuously
+learning and improving my technical skills. My background in graphic design
+allows me to combine creativity with technology to produce high-quality digital
+solutions.
+</p>
+
+<p>
+I am highly motivated, adaptable, and committed to delivering reliable and
+efficient results in both technical support and digital design environments.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="charts">
+
+<div class="chart">
+<svg>
+<circle cx="60" cy="60" r="50"></circle>
+<circle cx="60" cy="60" r="50" style="--percent:90"></circle>
+</svg>
+<p>HTML</p>
+</div>
+
+<div class="chart">
+<svg>
+<circle cx="60" cy="60" r="50"></circle>
+<circle cx="60" cy="60" r="50" style="--percent:90"></circle>
+</svg>
+<p>CSS</p>
+</div>
+
+<div class="chart">
+<svg>
+<circle cx="60" cy="60" r="50"></circle>
+<circle cx="60" cy="60" r="50" style="--percent:50"></circle>
+</svg>
+<p>JavaScript</p>
+</div>
+
+<div class="chart">
+<svg>
+<circle cx="60" cy="60" r="50"></circle>
+<circle cx="60" cy="60" r="50" style="--percent:50"></circle>
+</svg>
+<p>Networking</p>
+</div>
+
+<div class="chart">
+<svg>
+<circle cx="60" cy="60" r="50"></circle>
+<circle cx="60" cy="60" r="50" style="--percent:90"></circle>
+</svg>
+<p>Graphic Design</p>
+</div>
+
+<div class="chart">
+<svg>
+<circle cx="60" cy="60" r="50"></circle>
+<circle cx="60" cy="60" r="50" style="--percent:80"></circle>
+</svg>
+<p>IT Support</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<h2>My Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>A responsive personal portfolio</p>
+</div>
+
+<div class="project">
+<h3>Plumbing Business Website</h3>
+<p>A modern business website for plumbing services.</p>
+</div>
+
+<div class="project">
+<h3>Responsive gym website</h3>
+<p>My final year school project.</p>
+</div>
+
+<div class="project">
+<h3>Graphic Design Projects</h3>
+<p>Creative posters, branding, and digital designs.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<p><i class="fas fa-phone"></i> +254797 77 57 42</p>
+<p><i class="fas fa-envelope"></i> mwenikelsey@gmail.com</p>
+<p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+
+</section>
+
+<footer>
+<p>© 2026 Kelsey Mweni</p>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/254797775742" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+
+/* TYPING EFFECT */
+const words = ["Web Developer(Front-End developer)", "IT Support Specialist", "Graphic Designer"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+current = words[i];
+if(!isDeleting){
+document.getElementById("typing").textContent = current.substring(0,j++);
+if(j>current.length){isDeleting=true; setTimeout(type,1000); return;}
+}else{
+document.getElementById("typing").textContent = current.substring(0,j--);
+if(j==0){isDeleting=false; i=(i+1)%words.length;}
+}
+setTimeout(type, isDeleting?50:100);
+}
+type();
+
+</script>
+
+</body>
+</html>
